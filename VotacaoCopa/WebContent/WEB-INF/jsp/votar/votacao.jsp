@@ -53,7 +53,7 @@ body {
 			<input type="radio"	name="mascoteTO.nome" value="Fuleco">Fuleco<br> 
 			<input type="radio" name="mascoteTO.nome" value="Zuzeco">Zuzeco
 			<img src="<c:url value="/stickyImg"/>"  id="captchaImage"/> <br>
-			<input type="text" name="mascoteTO.captcha" value="" class="required"/>
+			<input type="text" name="mascoteTO.captcha" value="" />
 			<button type="submit">Votar!</button>
 		</form>
 

@@ -1,3 +1,63 @@
 VOTACAO COPA
 --------------------------------------------------------------------------------
-TODO: escrever texto resumido
+@author Jorge Peres Guimarães
+
+Projeto criado para apresentação a empresa TQI
+
+Tecnologias usadas:
+Vraptor, Hibernate e SimpleCaptcha
+
+Telas:
+Bootstrap(twitter toolkit para criação de paginas) e Jquery
+
+Testes:
+Junit e Mockito
+
+Banco:
+Mysql
+
+Script para criação do banco:
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tempo de Geração: Nov 29, 2012 as 12:11 AM
+-- Versão do Servidor: 5.1.53
+-- Versão do PHP: 5.3.4
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Banco de Dados: `votacaocopa`
+--
+CREATE DATABASE `votacaocopa` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `votacaocopa`;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `mascote`
+--
+
+CREATE TABLE IF NOT EXISTS `mascote` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `NOME` varchar(30) NOT NULL,
+  `VOTOS` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Extraindo dados da tabela `mascote`
+--
+
+INSERT INTO `mascote` (`ID`, `NOME`, `VOTOS`) VALUES
+(1, 'Amijubi', 0),
+(2, 'Fuleco', 0),
+(5, 'Zuzeco', 0);

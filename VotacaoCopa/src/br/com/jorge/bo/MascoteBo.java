@@ -54,6 +54,9 @@ public class MascoteBo{
 				totalDeVotos = totalDeVotos + mascote.getVotos();				
 			}
 			
+			if (totalDeVotos == 0L) {
+				totalDeVotos = 1L;
+			}
 			for (Mascote mascote : mascotes) {
 				long percVotos = Math.round(mascote.getVotos() * 100.0/totalDeVotos);
 				mascoteTOs.add(new MascoteTO(mascote.getNome(), mascote.getVotos(), percVotos));
