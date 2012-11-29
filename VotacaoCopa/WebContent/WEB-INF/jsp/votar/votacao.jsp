@@ -44,14 +44,26 @@ body {
 			</ul>
 		</div>	
 		<c:if test="${not empty mensagem}">
-			<span class="label label-success"> ${mensagem}</span>
+			<div class="alert alert-success">
+			  <button type="button" class="close" data-dismiss="alert">×</button>
+			  ${mensagem}.
+			</div>
 		</c:if>
 		<h1>Copa do Mundo 2014</h1>
 		<h5>Escolha o melhor nome para o mascote</h5>
 		<form action="<%=request.getContextPath()%>/votar/votar" method="post">
-			<input type="radio" name="mascoteTO.nome" value="Amijubi"checked="checked">Amijubi<br> 
-			<input type="radio"	name="mascoteTO.nome" value="Fuleco">Fuleco<br> 
-			<input type="radio" name="mascoteTO.nome" value="Zuzeco">Zuzeco
+			<label class="radio">
+				<input type="radio" name="mascoteTO.nome" value="Amijubi" checked>
+				Amijubi - União das palavras amizade e jublio.
+			</label>			
+			<label class="radio">
+				<input type="radio"	name="mascoteTO.nome" value="Fuleco">
+				Fuleco - Uma mistura de futebol e ecologia.
+			</label>			
+			<label class="radio">
+				<input type="radio" name="mascoteTO.nome" value="Zuzeco">
+				Zuzeco - Mistura da cor azul com ecologia.
+			</label>		
 			<img src="<c:url value="/stickyImg"/>"  id="captchaImage"/> <br>
 			<input type="text" name="mascoteTO.captcha" value="" />
 			<button type="submit">Votar!</button>

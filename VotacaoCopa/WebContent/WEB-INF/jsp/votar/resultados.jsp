@@ -31,7 +31,8 @@
 	        </div>
 	      </div>
 	    </div>
-<table>
+	    <h1>Confira o resultado parcial da votação</h1>
+	<table class="table">
 		<thead>
 			<tr>
 				<th>NOME</th>

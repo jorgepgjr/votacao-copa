@@ -4,7 +4,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
 
 import br.com.caelum.vraptor.ioc.ApplicationScoped;
 import br.com.caelum.vraptor.ioc.Component;
@@ -27,7 +27,7 @@ public class CriadorDeSessionFactory implements ComponentFactory<SessionFactory>
 	
 	@PostConstruct
 	public void open() {
-		AnnotationConfiguration configuration =	new AnnotationConfiguration();
+		Configuration configuration = new Configuration();
 		configuration.configure();
 		this.factory = configuration.buildSessionFactory();;
 	}
@@ -41,5 +41,4 @@ public class CriadorDeSessionFactory implements ComponentFactory<SessionFactory>
 		return this.factory;
 	}
   
-
 }

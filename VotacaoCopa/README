@@ -1,6 +1,6 @@
 VOTACAO COPA
 --------------------------------------------------------------------------------
-@author Jorge Peres Guimarães
+@author Jorge Peres Guimarães Junior
 
 Projeto criado para apresentação a empresa TQI
 
@@ -12,6 +12,17 @@ Bootstrap(twitter toolkit para criação de paginas) e Jquery
 
 Testes:
 Junit e Mockito
+
+Infos:
+Parametro isMostraResultados criado na configuração da aplicação como foi pedido no pdf
+
+Melhorias que não foram feitas por falta de tempo:
+
+* Reaproveitamento de views - podemos usar algum framework para aproveitar as telas como por exemplo o tiles.
+* Maven - configurar o maven para controlar as dependencias do proejeto.
+* Cobrir mais código com testes - criei apenas um teste para mostrar a utilização do Mockito.
+* Comentários - adicionar mais comentários/javadoc.
+* CheckStyle - utilizar o Checkstyle para padronizar e deixar o código mais limpo (feito em algumas classes)
 
 Banco:
 Mysql
